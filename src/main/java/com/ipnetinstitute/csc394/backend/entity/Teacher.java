@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 
 @Entity
 public class Teacher extends BaseEntity{
+	
 	String matricule;
 
 	public String getMatricule() {

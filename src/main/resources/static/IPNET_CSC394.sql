@@ -10,7 +10,7 @@ CREATE TABLE `users` (
 );
 
 CREATE TABLE `student` (
-  `id` int PRIMARY KEY,
+  `id` int PRIMARY KEY  AUTO_INCREMENT,
   `matricule` varchar(10) UNIQUE NOT NULL,
   `create_date_time` timestamp NOT NULL COMMENT 'When created',
   `mod_date_time` timestamp NOT NULL COMMENT 'When changed',
@@ -18,7 +18,7 @@ CREATE TABLE `student` (
 );
 
 CREATE TABLE `teacher` (
-  `id` int PRIMARY KEY,
+  `id` int PRIMARY KEY  AUTO_INCREMENT,
   `matricule` varchar(10) UNIQUE NOT NULL,
   `create_date_time` timestamp NOT NULL COMMENT 'When created',
   `mod_date_time` timestamp NOT NULL COMMENT 'When changed',

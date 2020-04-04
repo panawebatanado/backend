@@ -4,6 +4,7 @@ import com.ipnetinstitute.csc394.backend.dao.BaseEntityRepository;
 import com.ipnetinstitute.csc394.backend.entity.*;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -74,7 +75,14 @@ public class BaseController implements InitializingBean {
 			throws ClassNotFoundException {
 		T result = (T) be;
 		try {
+			if(be.getId()==null) {
+				be.setCreateDateTime(new Date());
+				be.setModDateTime(new Date());
+			}else {
+				be.setModDateTime(new Date());
+			}
 			result = (T) repos.get(entity).save(be);
+			
 		} catch (Exception e) {
 			result.setError(e.getMessage());
 			e.printStackTrace();

@@ -111,6 +111,7 @@ public class BaseController implements InitializingBean {
 			repos.get(entity).deleteById(id);
 			return "Success";
 		} catch (Exception e) {
+			e.printStackTrace();
 			return "Error: " + e.getMessage();
 		}
 	}

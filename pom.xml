@@ -11,7 +11,7 @@
 	<groupId>com.ipnetinstitute.csc394.backend</groupId>
 	<artifactId>csc394backend</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>csc394backend</name>
+	<name>csc394backend</name> 
 	<description>Demo project for Spring Boot</description>
 
 	<properties>

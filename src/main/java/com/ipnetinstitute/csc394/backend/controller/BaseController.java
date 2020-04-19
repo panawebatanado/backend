@@ -28,7 +28,7 @@ public class BaseController implements InitializingBean {
 
 	@Autowired
 	private BaseEntityRepository<Student> studentRepo;
-
+ 
 	private static Map<String, BaseEntityRepository> repos;
 
 	@SuppressWarnings("unchecked")
@@ -58,7 +58,7 @@ public class BaseController implements InitializingBean {
 	}
 
 	@RequestMapping(value = "/count/{entity}", method = RequestMethod.GET)
-	public long count(@PathVariable("entity") String entity) throws ClassNotFoundException {
+	public Long count(@PathVariable("entity") String entity) throws ClassNotFoundException {
 		long result = 0;
 		try {
 			result = repos.get(entity).count();
@@ -104,7 +104,7 @@ public class BaseController implements InitializingBean {
 	}
 
 	@SuppressWarnings("unchecked")
-	@RequestMapping(value = "delete/{entity}/{id}", method = RequestMethod.GET)
+	@RequestMapping(value = "/delete/{entity}/{id}", method = RequestMethod.GET)
 	public String deleteById(@PathVariable("entity") String entity, @PathVariable("id") Integer id)
 			throws ClassNotFoundException {
 		try {

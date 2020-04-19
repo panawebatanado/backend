@@ -2,7 +2,7 @@ CREATE TABLE `users` (
   `id` int PRIMARY KEY AUTO_INCREMENT,
   `first_name` varchar(100) NOT NULL,
   `last_name` varchar(150) NOT NULL,
-  `username` varchar(30) NOT NULL,
+  `user_name` varchar(30) NOT NULL,
   `password` varchar(50) NOT NULL,
   `e_mail` varchar(150) UNIQUE NOT NULL,
   `phone` varchar(20) UNIQUE NOT NULL,

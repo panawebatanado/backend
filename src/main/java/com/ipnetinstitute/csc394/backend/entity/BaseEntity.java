@@ -22,6 +22,16 @@ include = com.fasterxml.jackson.annotation.JsonTypeInfo.As.PROPERTY, property = 
 @Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 @MappedSuperclass
 public abstract  class BaseEntity {
+	public BaseEntity() {
+		
+	}
+	public BaseEntity(Integer id, Date createDateTime, Date modDateTime, Integer modBy) {
+		super();
+		this.id = id;
+		this.createDateTime = createDateTime;
+		this.modDateTime = modDateTime;
+		this.modBy = modBy;
+	}
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	Integer id;

@@ -1,5 +1,5 @@
-= How to generate document using Spring REST Doc API
-Javadevjournal<contact-us@javadevjournal.com> 1.0.0;
+=  Les REST API de Course Survey
+IPNET - CSC394 <panawe.batanado@ipnetinstitute.com> 1.0.0;
 :doctype: book
 :icons: font
 :source-highlighter: highlightjs
@@ -24,7 +24,11 @@ use of HTTP verbs.
 | Used to retrieve a resource
 
 | `POST`
-| Used to create a new resource
+| Used to create or update a resource
+
+| `DELETE`
+| Used to delete a resource
+
 |===
 
 Voici la liste des services qui s'executent sur le URL http://localhost:8080:
@@ -32,9 +36,18 @@ Voici la liste des services qui s'executent sur le URL http://localhost:8080:
 == Save User
 .request
 include::{snippets}/save/http-request.adoc[]
+include::{snippets}/save/request-fields.adoc[]
 
 .response
 include::{snippets}/save/http-response.adoc[]
+
+== login
+.request
+include::{snippets}/login/http-request.adoc[]
+include::{snippets}/login/request-fields.adoc[]
+
+.response
+include::{snippets}/login/http-response.adoc[] 
 
 == delete User
 .request
@@ -50,9 +63,3 @@ include::{snippets}/count/http-request.adoc[]
 .response
 include::{snippets}/count/http-response.adoc[]
 
-== login
-.request
-include::{snippets}/login/http-request.adoc[]
-
-.response
-include::{snippets}/login/http-response.adoc[] 

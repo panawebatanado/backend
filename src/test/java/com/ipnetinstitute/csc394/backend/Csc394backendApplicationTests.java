@@ -73,7 +73,7 @@ class Csc394backendApplicationTests {
 			mockMvc.perform(post("/save/{entity}", "user").contentType(MediaType.APPLICATION_JSON).content(userJson))
 					.andExpect(status().isOk()).andExpect(jsonPath("userName", is(user.getUserName())))
 					.andDo(document("save", preprocessRequest(prettyPrint()), preprocessResponse(prettyPrint()),
-							requestFields(fieldWithPath("id").description("User id"),
+							requestFields(fieldWithPath("id").description("User id").ignored(),
 									fieldWithPath("userName").description("Nom d'utilisateur"),
 									fieldWithPath("password").description("Mot de passe"),
 									fieldWithPath("firstName").description("Prenom"),
